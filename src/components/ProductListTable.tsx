@@ -1,27 +1,37 @@
+import type { ProductFormType } from "../types/ProductFormType";
 
+interface ProductListTableProps {
+  products: ProductFormType[];
+}
 
-const ProductListTable = () => {
+const ProductListTable = ({ products }: ProductListTableProps) => {
   return (
-    <div>
-      <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Category</th>
-                <th>Quantity</th>
-                <th>Rating</th>
-            </tr>
+    <div className="P-3">
+      <table className="w-full border">
+        <thead className="bg-gray-200">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+          </tr>
         </thead>
 
         <tbody>
-            <tr>
-                
+          {products.map((product) => (
+            <tr key={product.id} className="border">
+              <td className="border px-2">{product.name}</td>
+              <td className="border px-2">{product.price}</td>
+              <td className="border px-2">{product.catrgory}</td>
+              <td className="border px-2">{product.quantity}</td>
+              <td className="border px-2">{product.rating}</td>
             </tr>
+          ))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default ProductListTable
+export default ProductListTable;
