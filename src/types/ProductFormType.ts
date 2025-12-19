@@ -1,8 +1,8 @@
 export type ProductFormType = {
   id: number;
   name: string;
-  price: string;
-  catrgory: string;
+  price: number;
+  category: string;
   rating: number;
   quantity: number;
 };

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import type { ProductFormType } from "../types/ProductFormType";
+import { useForm } from "react-hook-form";
+import { Star } from "lucide-react";
 
 interface AddProductFormProps {
   onAddProduct: (product: ProductFormType) => void;
