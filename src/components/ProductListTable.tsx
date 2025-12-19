@@ -23,7 +23,7 @@ const ProductListTable = ({ products }: ProductListTableProps) => {
             <tr key={product.id} className="border">
               <td className="border px-2">{product.name}</td>
               <td className="border px-2">{product.price}</td>
-              <td className="border px-2">{product.catrgory}</td>
+              <td className="border px-2">{product.category}</td>
               <td className="border px-2">{product.quantity}</td>
               <td className="border px-2">{product.rating}</td>
             </tr>
