@@ -77,6 +77,13 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
           >
             Quantity
           </label>
+          <input
+            {...register("quantity", { required: true })}
+            type="number"
+            className="w-full border rounded-lg p-2"
+            placeholder="200"
+          />
+         </div>
           <div className="flex space-x-2">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star
@@ -91,7 +98,7 @@ const AddProductForm = ({ onAddProduct }: AddProductFormProps) => {
               />
             ))}
           </div>
-        </div>
+       
         <button
           type="submit"
           className="w-full bg-blue-600 text-white py-2 rounded-x1 text-lg font-semibold"
